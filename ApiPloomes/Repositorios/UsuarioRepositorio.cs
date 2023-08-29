@@ -25,7 +25,7 @@ namespace ApiPloomes.Repositorios
         public async Task<UsuarioModel> Adicionar(UsuarioModel usuario)
         {
             _dbContext.Usuarios.Add(usuario);   
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
             return usuario;
 
         }
@@ -39,7 +39,7 @@ namespace ApiPloomes.Repositorios
             usuarioId.Nome = usuario.Nome;
             usuarioId.Email = usuario.Email;
             _dbContext.Usuarios.Update(usuarioId);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
             return usuarioId;
         }
         public async Task<bool> Apagar(int id)
@@ -51,7 +51,7 @@ namespace ApiPloomes.Repositorios
             }
 
             _dbContext.Usuarios.Remove(usuarioId);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
             return true;    
         }
 

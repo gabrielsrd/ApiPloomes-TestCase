@@ -1,4 +1,5 @@
-﻿using ApiPloomes.Models;
+﻿using ApiPloomes.Data.Map;
+using ApiPloomes.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiPloomes.Data
@@ -15,10 +16,12 @@ namespace ApiPloomes.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new TarefaMap());
             base.OnModelCreating(modelBuilder);
             //modelBuilder.Entity<UsuarioModel>().ToTable("Usuario");
             //modelBuilder.Entity<TarefaModel>().ToTable("Tarefa");
         }   
 
-    }
+    } 
 }
