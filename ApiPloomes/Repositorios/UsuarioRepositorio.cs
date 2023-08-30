@@ -36,6 +36,7 @@ namespace ApiPloomes.Repositorios
             {
                 throw new Exception($"Usuario com id: {id}  não encontrado");
             }
+            
             usuarioId.Nome = usuario.Nome;
             usuarioId.Email = usuario.Email;
             _dbContext.Usuarios.Update(usuarioId);
