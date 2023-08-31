@@ -1,15 +1,6 @@
 # ApiPloomes - API REST em C# para Gerenciamento de Usuários e Tarefas
 
-O ApiPloomes é uma API simples criada em C# que permite você executar operações básicas de gerenciamento de usuários e tarefas. A API utiliza o protocolo HTTP e o formato JSON para se comunicar e interage com um banco de dados SQL Server.
-
-## Começando
-
-Siga estas instruções para configurar e executar o projeto ApiPloomes em sua própria máquina.
-
-### Pré-requisitos
-
-- SDK do .NET Core (versão X.X.X)
-- SQL Server (local ou remoto)
+O ApiPloomes é uma API simples criada em C# que permite executar operações básicas de gerenciamento de usuários e tarefas. A API utiliza o protocolo HTTP e o formato JSON para se comunicar e interage com um banco de dados SQL Server.
 
 ### Instalação
 
